@@ -1,0 +1,142 @@
+/* Start Global styles */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg_patern {
+    position: fixed;
+    z-index: -100;
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/cool-background.png);
+    filter: blur(4px);
+}
+
+/* End Global styles */
+
+.game {
+    width: 300px;
+    margin: auto;
+    border: 2px solid #f06566;
+    text-align: center;
+    padding: 20px;
+}
+
+.game,
+.square {
+    /* font */
+    font-size: 170%;
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+.title {
+    margin-bottom: 15px;
+}
+
+.title span {
+    color: #9f1e1e;
+}
+
+.square_box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.row1,
+.row2,
+.row3 {
+    display: flex;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    background-color: #f06566;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square:hover {
+    background-color: #f0656595;
+    cursor: pointer;
+}
+
+.x_score {
+    margin-bottom: 12px;
+}
+
+.o_score #oScore,
+.x_score #xScore {
+    margin-left: 20px;
+}
+
+#resetButton {
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    padding: 8px 15px;
+    font-size: 70%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#resetButton::before {
+    box-sizing: border-box;
+    transform: translateX(100%);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 99.5%;
+    height: 2px;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+#resetButton::after {
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99.5%;
+    height: 2px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+#resetButton:hover {
+    color: #f0656595;
+    text-decoration: none;
+    transition: 0.4s color linear;
+}
+
+#resetButton:hover::after {
+    transition: 0.1s transform linear, 0.1s height linear 0.1s;
+    transform: translateX(0%);
+    height: 100%;
+    border-color: #f06566;
+}
+
+#resetButton:hover::before {
+    transition: 0.1s transform linear 0s, 0.1s height linear 0.1s;
+    transform: translateX(0%);
+    height: 100%;
+    border-color: #f06566;
+}

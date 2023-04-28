@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X_O_Game</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="bg_patern">
+    </div> <!-- bg_patern -->
+
+    <div class="game">
+
+        <div class="title_content">
+            <div class="title"> <span>X O</span> Game </div>
+        </div> <!-- title -->
+
+        <div class="square_box">
+            <div class="row1">
+                <div class="square" id="item1" onclick="game(this.id)"></div>
+                <div class="square" id="item2" onclick="game(this.id)"></div>
+                <div class="square" id="item3" onclick="game(this.id)"></div>
+            </div> <!-- row1 -->
+
+            <div class="row2">
+                <div class="square" id="item4" onclick="game(this.id)"></div>
+                <div class="square" id="item5" onclick="game(this.id)"></div>
+                <div class="square" id="item6" onclick="game(this.id)"></div>
+            </div> <!-- row2 -->
+
+            <div class="row2">
+                <div class="square" id="item7" onclick="game(this.id)"></div>
+                <div class="square" id="item8" onclick="game(this.id)"></div>
+                <div class="square" id="item9" onclick="game(this.id)"></div>
+            </div> <!-- row2 -->
+        </div> <!-- square_box -->
+
+        <div class="score">
+            <div class="x_score">
+                X<span id="xScore"></span>
+            </div> <!-- x_score -->
+
+            <div class="o_score">
+                O<span id="oScore"></span>
+            </div> <!-- o_score -->
+        </div> <!-- score -->
+
+        <button id="resetButton" onclick="reloadButton()">Reset</button>
+    </div> <!-- game -->
+
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
